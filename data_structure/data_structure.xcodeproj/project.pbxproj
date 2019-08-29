@@ -54,6 +54,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F654D97623177D2F00E1BA92 /* array */ = {
+			isa = PBXGroup;
+			children = (
+				F65C1E8923167F9F00340280 /* array.c */,
+				F65C1E8E23167F9F00340280 /* array.h */,
+			);
+			path = array;
+			sourceTree = "<group>";
+		};
+		F654D97723177D3900E1BA92 /* stack */ = {
+			isa = PBXGroup;
+			children = (
+				F65C1E8A23167F9F00340280 /* stack.c */,
+				F65C1E8F23167F9F00340280 /* stack.h */,
+			);
+			path = stack;
+			sourceTree = "<group>";
+		};
+		F654D97823177D4000E1BA92 /* queue */ = {
+			isa = PBXGroup;
+			children = (
+				F654D97223176E5D00E1BA92 /* queue.h */,
+				F654D97323176E5D00E1BA92 /* queue.c */,
+			);
+			path = queue;
+			sourceTree = "<group>";
+		};
+		F654D97923177D4A00E1BA92 /* linked_list */ = {
+			isa = PBXGroup;
+			children = (
+				F65C1E8B23167F9F00340280 /* linked_list.c */,
+				F65C1E8D23167F9F00340280 /* linked_list.h */,
+			);
+			path = linked_list;
+			sourceTree = "<group>";
+		};
 		F65C1E6A23167E0900340280 = {
 			isa = PBXGroup;
 			children = (
@@ -91,24 +127,12 @@
 		F65C1E8823167F9F00340280 /* data_structure */ = {
 			isa = PBXGroup;
 			children = (
-				F65C1E8C23167F9F00340280 /* headers */,
-				F65C1E8923167F9F00340280 /* array.c */,
-				F65C1E8B23167F9F00340280 /* linked_list.c */,
-				F65C1E8A23167F9F00340280 /* stack.c */,
-				F654D97223176E5D00E1BA92 /* queue.h */,
-				F654D97323176E5D00E1BA92 /* queue.c */,
+				F654D97923177D4A00E1BA92 /* linked_list */,
+				F654D97823177D4000E1BA92 /* queue */,
+				F654D97723177D3900E1BA92 /* stack */,
+				F654D97623177D2F00E1BA92 /* array */,
 			);
 			path = data_structure;
-			sourceTree = "<group>";
-		};
-		F65C1E8C23167F9F00340280 /* headers */ = {
-			isa = PBXGroup;
-			children = (
-				F65C1E8E23167F9F00340280 /* array.h */,
-				F65C1E8D23167F9F00340280 /* linked_list.h */,
-				F65C1E8F23167F9F00340280 /* stack.h */,
-			);
-			path = headers;
 			sourceTree = "<group>";
 		};
 		F65C1E932316800200340280 /* test */ = {
