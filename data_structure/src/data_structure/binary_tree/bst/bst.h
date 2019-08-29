@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "binary_tree.h"
 
-typedef struct bst bst;
 
 #endif /* bst_h */
