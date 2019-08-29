@@ -8,12 +8,31 @@
 
 #include <stdio.h>
 
-#include "array_test.h"
+#include "../test/array_test.c"
+#include "../test/linked_list_test.c"
+#include "../test/stack_test.c"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     
-    test_array_int();
+    //================
+    //    数组测试
+    //================
+//    test_array_int();
+//    test_array_struct();
+
+    
+    //================
+    //    链表测试
+    //================
+//    linked_list_test1();
+//    linked_list_test2();
+    
+    //================
+    //    栈测试
+    //================
+    test_stack_int();
     test_array_struct();
+    
     return 0;
 }
