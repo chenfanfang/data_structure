@@ -17,7 +17,7 @@
 typedef struct array array;
 
 
-//创建数组、bytes_per_element_point：数组中需要存放元素指针的大小  单位为 Byte
+//创建数组
 array *array_create(void);
 
 //判断数组是否为空数组
