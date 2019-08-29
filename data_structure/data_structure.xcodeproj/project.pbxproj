@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F654D97423176E5D00E1BA92 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = F654D97323176E5D00E1BA92 /* queue.c */; };
 		F65C1E7723167E0900340280 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F65C1E7623167E0900340280 /* main.c */; };
 		F65C1E9023167F9F00340280 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = F65C1E8923167F9F00340280 /* array.c */; };
 		F65C1E9123167F9F00340280 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = F65C1E8A23167F9F00340280 /* stack.c */; };
@@ -28,6 +29,9 @@
 /* Begin PBXFileReference section */
 		F654D96F23176ABC00E1BA92 /* linked_list_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linked_list_test.c; sourceTree = "<group>"; };
 		F654D97123176BA100E1BA92 /* stack_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack_test.c; sourceTree = "<group>"; };
+		F654D97223176E5D00E1BA92 /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		F654D97323176E5D00E1BA92 /* queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = queue.c; sourceTree = "<group>"; };
+		F654D975231777A800E1BA92 /* queue_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = queue_test.c; sourceTree = "<group>"; };
 		F65C1E7323167E0900340280 /* data_structure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = data_structure; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65C1E7623167E0900340280 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F65C1E8923167F9F00340280 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = array.c; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				F65C1E8923167F9F00340280 /* array.c */,
 				F65C1E8B23167F9F00340280 /* linked_list.c */,
 				F65C1E8A23167F9F00340280 /* stack.c */,
+				F654D97223176E5D00E1BA92 /* queue.h */,
+				F654D97323176E5D00E1BA92 /* queue.c */,
 			);
 			path = data_structure;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 				F65C1E942316800200340280 /* array_test.c */,
 				F654D96F23176ABC00E1BA92 /* linked_list_test.c */,
 				F654D97123176BA100E1BA92 /* stack_test.c */,
+				F654D975231777A800E1BA92 /* queue_test.c */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			files = (
 				F65C1E9223167F9F00340280 /* linked_list.c in Sources */,
 				F65C1E9123167F9F00340280 /* stack.c in Sources */,
+				F654D97423176E5D00E1BA92 /* queue.c in Sources */,
 				F65C1E7723167E0900340280 /* main.c in Sources */,
 				F65C1E9023167F9F00340280 /* array.c in Sources */,
 			);

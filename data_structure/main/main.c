@@ -11,6 +11,7 @@
 #include "../test/array_test.c"
 #include "../test/linked_list_test.c"
 #include "../test/stack_test.c"
+#include "../test/queue_test.c"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -31,8 +32,14 @@ int main(int argc, const char * argv[]) {
     //================
     //    栈测试
     //================
-    test_stack_int();
-    test_array_struct();
+//    test_stack_int();
+//    test_array_struct();
+    
+    //================
+    //    队列测试
+    //================
+    test_queue_enqueue_custom_data();
+    test_queue_enqueue_int();
     
     return 0;
 }
