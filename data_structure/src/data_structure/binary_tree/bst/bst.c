@@ -10,11 +10,42 @@
 #include <assert.h>
 
 
+unsigned int bst_node_count(bst *tree) {
+    return binary_tree_node_count(tree);
+}
 
-binary_tree_node *bst_get_node(binary_tree *tree ,void *element) {
+bool bst_is_empty(bst *tree) {
+    return binary_tree_is_empty(tree);
+}
+
+bool bst_node_has_two_children(bst_node *node) {
+    return binary_tree_node_has_two_children(node);
+}
+
+bst_node *bst_node_create(void *element) {
+    return binary_tree_node_create(element);
+}
+
+unsigned int bst_height(bst *tree) {
+    return binary_tree_height(tree);
+}
+
+bst_node *bst_predecessor_node(bst *tree, bst_node *node) {
+    return binary_tree_predecessor_node(tree, node);
+}
+
+bst_node *bst_successor_node(bst *tree, bst_node *node) {
+    return binary_tree_successor_node(tree, node);
+}
+
+
+//==========================================================================
+
+
+bst_node *bst_get_node(bst *tree ,void *element) {
     
     int compare_result = 0;
-    binary_tree_node *node = tree->root;
+    bst_node *node = tree->root;
     while (node != NULL) {
         compare_result = (*(tree->compare_function))(element, node->element);//element - node->element;
         //相等，直接返回node
@@ -34,31 +65,31 @@ binary_tree_node *bst_get_node(binary_tree *tree ,void *element) {
 }
 
 //创建二叉搜索树， count 为intelementues数组的长度
-binary_tree *bst_create(int (*compare_function)(void *element1, void *element2)) {
+bst *bst_create(int (*compare_function)(void *element1, void *element2)) {
     
     if (compare_function == NULL) {
         printf("compare_function can not be NULL");
         assert(false);
     }
     
-    binary_tree *tree = calloc(1, sizeof(binary_tree));
+    bst *tree = calloc(1, sizeof(bst));
     tree->compare_function = compare_function;
     return tree;
 }
 
 //未实现
-void bst_clear(binary_tree *tree) {
+void bst_clear(bst *tree) {
     
 }
 
 //二叉搜索树添节点
-void bst_add(binary_tree *tree, void *element) {
+void bst_add(bst *tree, void *element) {
     
     if (tree == NULL || element == NULL) {
         return;
     }
     
-    binary_tree_node *new_node = binary_tree_node_create(element);
+    bst_node *new_node = bst_node_create(element);
     //添加第一个节点
     if (tree->root == NULL) {
         tree->root = new_node;
@@ -66,8 +97,8 @@ void bst_add(binary_tree *tree, void *element) {
         return;
     }
     
-    binary_tree_node *parrent_node = NULL;
-    binary_tree_node *node = tree->root;
+    bst_node *parrent_node = NULL;
+    bst_node *node = tree->root;
     int compare_result = 0; //新加的节点若等于比较的节点 ，则为0， 若大于则为1  若小于 则为-1
     do {
         compare_result = (*(tree->compare_function))(element, node->element);
@@ -134,14 +165,14 @@ void bst_add(binary_tree *tree, void *element) {
          2、然后删除相应的前驱或者后继节点
          注意：如果一个节点的度为2，那么它的前驱、后继节点的度只可能为1和0
  */
-void bst_remove_node(binary_tree *tree, binary_tree_node *node) {
+void bst_remove_node(bst *tree, bst_node *node) {
     if (node == NULL) return;
     
     tree->node_count = tree->node_count - 1;
     
-    if (binary_tree_node_has_two_children(node)) { // 度为2的节点
+    if (bst_node_has_two_children(node)) { // 度为2的节点
         // 找到后继节点
-        binary_tree_node *successor_node = binary_tree_successor_node(tree, node);
+        bst_node *successor_node = bst_successor_node(tree, node);
         
         // 用后继节点的值覆盖度为2的节点的值
         node->element = successor_node->element;
@@ -150,7 +181,7 @@ void bst_remove_node(binary_tree *tree, binary_tree_node *node) {
     }
     
     // 删除node节点（此时node的度必然是1或者0）
-    binary_tree_node *replacement_node = node->left != NULL ? node->left : node->right;
+    bst_node *replacement_node = node->left != NULL ? node->left : node->right;
     
     if (replacement_node != NULL) { // node是度为1的节点
         // 更改parent
@@ -181,17 +212,17 @@ void bst_remove_node(binary_tree *tree, binary_tree_node *node) {
 }
 
 //删除元素
-void bst_remove(binary_tree *tree, void *element) {
-    binary_tree_node *node = bst_get_node(tree, element);
+void bst_remove(bst *tree, void *element) {
+    bst_node *node = bst_get_node(tree, element);
     bst_remove_node(tree, node);
 }
 
-bool bst_contains(binary_tree *tree, void *element) {
-    binary_tree_node *binary_tree_node = bst_get_node(tree, element);
-    return binary_tree_node != NULL;
+bool bst_contains(bst *tree, void *element) {
+    bst_node *bst_node = bst_get_node(tree, element);
+    return bst_node != NULL;
 }
 
 
-void bst_destroy(binary_tree *tree) {
+void bst_destroy(bst *tree) {
     
 }
