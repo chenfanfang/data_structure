@@ -35,15 +35,16 @@ bst_node *bst_successor_node(bst *tree, bst_node *node);
 
 //=============================================================
 
-bst_node *bst_get_node(bst *tree ,void *element);
+bst_node *bst_get_node(bst *tree ,void *element); //private
 
 bst *bst_create(int (*compare_function)(void *element1, void *element2));
 
 void bst_clear(bst *tree);
 
-void bst_add(bst *tree, void *element);
+bst_node *bst_add(bst *tree, void *element);
 
-void bst_remove(bst *tree, void *element);
+//Users need to free node memory
+bst_node *bst_remove(bst *tree, void *element);
 
 bool bst_contains(bst *tree, void *element);
 

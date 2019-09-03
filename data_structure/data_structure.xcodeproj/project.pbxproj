@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63D5643231E5E4500382EB2 /* avl_tree.c in Sources */ = {isa = PBXBuildFile; fileRef = F63D5642231E5E4500382EB2 /* avl_tree.c */; };
 		F654D97423176E5D00E1BA92 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = F654D97323176E5D00E1BA92 /* queue.c */; };
 		F654D9802317A09300E1BA92 /* bst.c in Sources */ = {isa = PBXBuildFile; fileRef = F654D97F2317A09300E1BA92 /* bst.c */; };
 		F654D9882317AC2E00E1BA92 /* binary_tree.c in Sources */ = {isa = PBXBuildFile; fileRef = F654D9872317AC2E00E1BA92 /* binary_tree.c */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F63D5641231E5E4500382EB2 /* avl_tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avl_tree.h; sourceTree = "<group>"; };
+		F63D5642231E5E4500382EB2 /* avl_tree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avl_tree.c; sourceTree = "<group>"; };
 		F654D96F23176ABC00E1BA92 /* linked_list_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linked_list_test.c; sourceTree = "<group>"; };
 		F654D97123176BA100E1BA92 /* stack_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack_test.c; sourceTree = "<group>"; };
 		F654D97223176E5D00E1BA92 /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F63D5640231E5C4500382EB2 /* avl_tree */ = {
+			isa = PBXGroup;
+			children = (
+				F63D5641231E5E4500382EB2 /* avl_tree.h */,
+				F63D5642231E5E4500382EB2 /* avl_tree.c */,
+			);
+			path = avl_tree;
+			sourceTree = "<group>";
+		};
 		F654D97623177D2F00E1BA92 /* array */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 			children = (
 				F654D9862317AC2E00E1BA92 /* binary_tree.h */,
 				F654D9872317AC2E00E1BA92 /* binary_tree.c */,
+				F63D5640231E5C4500382EB2 /* avl_tree */,
 				F654D97A23179DFA00E1BA92 /* bst */,
 			);
 			path = binary_tree;
@@ -233,6 +246,7 @@
 				F654D97423176E5D00E1BA92 /* queue.c in Sources */,
 				F654D9802317A09300E1BA92 /* bst.c in Sources */,
 				F65C1E7723167E0900340280 /* main.c in Sources */,
+				F63D5643231E5E4500382EB2 /* avl_tree.c in Sources */,
 				F654D9882317AC2E00E1BA92 /* binary_tree.c in Sources */,
 				F65C1E9023167F9F00340280 /* array.c in Sources */,
 			);

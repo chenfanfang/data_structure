@@ -19,6 +19,7 @@ typedef struct binary_tree_node {
     struct binary_tree_node *left;
     struct binary_tree_node *right;
     struct binary_tree_node *parent;
+    unsigned int height; //for avl    从下到上
     
 } binary_tree_node;
 
@@ -37,6 +38,10 @@ unsigned int binary_tree_node_count(binary_tree *tree);
 bool binary_tree_is_empty(binary_tree *tree);
 
 bool binary_tree_node_has_two_children(binary_tree_node *node);
+
+bool binary_tree_node_is_left_child(binary_tree_node *node);
+
+bool binary_tree_node_is_right_child(binary_tree_node *node);
 
 //创建树节点
 binary_tree_node *binary_tree_node_create(void *element);

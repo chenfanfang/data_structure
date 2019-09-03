@@ -83,10 +83,10 @@ void bst_clear(bst *tree) {
 }
 
 //二叉搜索树添节点
-void bst_add(bst *tree, void *element) {
+bst_node *bst_add(bst *tree, void *element) {
     
     if (tree == NULL || element == NULL) {
-        return;
+        return NULL;
     }
     
     bst_node *new_node = bst_node_create(element);
@@ -94,7 +94,7 @@ void bst_add(bst *tree, void *element) {
     if (tree->root == NULL) {
         tree->root = new_node;
         tree->node_count = tree->node_count + 1;
-        return;
+        return new_node;
     }
     
     bst_node *parrent_node = NULL;
@@ -116,7 +116,7 @@ void bst_add(bst *tree, void *element) {
         //想等，则直接替换值，并且return
         else {
             node->element = element;
-            return;
+            return node;
         }
         
     } while (node != NULL);
@@ -135,6 +135,7 @@ void bst_add(bst *tree, void *element) {
     
     tree->node_count = tree->node_count + 1;
     
+    return new_node;
 }
 
 
@@ -212,9 +213,10 @@ void bst_remove_node(bst *tree, bst_node *node) {
 }
 
 //删除元素
-void bst_remove(bst *tree, void *element) {
+bst_node *bst_remove(bst *tree, void *element) {
     bst_node *node = bst_get_node(tree, element);
     bst_remove_node(tree, node);
+    return node;
 }
 
 bool bst_contains(bst *tree, void *element) {

@@ -27,6 +27,16 @@ bool binary_tree_node_has_two_children(binary_tree_node *node) {
     }
 }
 
+bool binary_tree_node_is_left_child(binary_tree_node *node) {
+    
+    return node->parent != NULL && node == node->parent->left;
+}
+
+bool binary_tree_node_is_right_child(binary_tree_node *node) {
+    
+    return node->parent != NULL && node == node->parent->right;
+}
+
 //创建树节点
 binary_tree_node *binary_tree_node_create(void *element) {
     
